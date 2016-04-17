@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  root "students#index"
+  root "students#new"
   resources :students
+
+
+  get 'students/:id' => 'students#edit'
+
+  #root "subjects#index"
+  #get "/subjects" => "subjects#index"
+  #resources :subjects
+
+  #get "/marks" => "marks#index"
+  #resources :marks
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

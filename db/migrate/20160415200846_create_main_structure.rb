@@ -10,9 +10,11 @@ class CreateMainStructure < ActiveRecord::Migration
     		t.text :opinion
     		t.float :average_mark
     	end
+
     	create_table :subjects do |t|
     		t.string :subject
     	end
+    	
     	create_table :marks do |t|
     		t.belongs_to :subject
     		t.belongs_to :student

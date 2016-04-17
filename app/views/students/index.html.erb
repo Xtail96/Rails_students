@@ -1,4 +1,27 @@
-<table>
+<table border="1px" border-color="#000">
+	<tr>
+		<td>
+			id
+		</td>
+		<td>
+			Фамилия
+		</td>
+		<td>
+			Имя
+		</td>
+		<td>
+			Почта
+		</td>
+		<td>
+			Группа
+		</td>
+		<td>
+			Дата рождения
+		</td>
+		<td>
+			Характеристика научного руководителя
+		</td>
+	</tr>
 	<% @students.each do |student| %>
 		<tr>
 			<td>
@@ -13,7 +36,29 @@
 			<td>
 				<%= student.email %>
 			</td>
+			<td>
+				<%= student.group %>
+			</td>
+			<td>
+				<%= student.birth %>
+			</td>
+			<td>
+				<%= student.opinion %>
+			</td>
 		
+		</tr>
+	<% end %>
+</table>
+<br />
+<table border="1px">
+	<tr>
+		<td>id-subject</td>
+		<td>Предмет</td>
+	</tr>
+	<% @subjects.each do |subject| %>
+		<tr>
+			<td><%= subject.id %></td>
+			<td><%= subject.subject %></td>
 		</tr>
 	<% end %>
 </table>
