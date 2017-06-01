@@ -9,6 +9,7 @@ class CreateMainStructure < ActiveRecord::Migration
     		t.timestamps
     		t.text :opinion
     		t.float :average_mark
+            t.inet :ip
     	end
 
     	create_table :subjects do |t|

@@ -1,14 +1,21 @@
 <h1>Добавленный студент: </h1>
-<p>id: <%= @students.id %> </p>
-<p>Фамилия: <%= @students.surname %> </p>
-<p>Имя: <%= @students.name %> </p>
-<p>E-mail: <%= @students.email %> </p>
-<p>Дата рождения: <%= @students.birth %> </p>
-<p>Группа: <%= @students.group %> </p>
-<p>Мнение научного руководителя:  <%= @students.opinion %> </p>
+<p>id: <%= @student.id %> </p>
+<p>Фамилия: <%= @student.surname %> </p>
+<p>Имя: <%= @student.name %> </p>
+<p>E-mail: <%= @student.email %> </p>
+<p>Дата рождения: <%= @student.birth %> </p>
+<p>Группа: <%= @student.group %> </p>
+<p> Средний балл: <%= @student.average_mark %> </p>
+<p>Мнение научного руководителя:  <%= @student.opinion %> </p>
 <br />
-<button>
-	Добавить нового студента
-</button>
-<br />
-<button>Редактировать студента</button>
+<h2>Оценки по предметам</h2>
+<table>
+	<tr>
+		<td>id-subject</td>
+		<td>Предмет</td>
+    <td>Оценка</td>
+	</tr>
+	
+</table>
+<button><%= link_to 'Редактировать данные студента', edit_student_path(@student.id) %></button>
+<button><%= link_to 'Добавить нового студента', new_student_path %></button>

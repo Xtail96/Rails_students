@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
-  root "students#new"
+  root "students#index"
   resources :students
 
 
-  get 'students/:id' => 'students#edit'
-
   #root "subjects#index"
   #get "/subjects" => "subjects#index"
-  #resources :subjects
+  resources :subjects
 
   #get "/marks" => "marks#index"
-  #resources :marks
+  resources :marks
 
 
   # The priority is based upon order of creation: first created -> highest priority.

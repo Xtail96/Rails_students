@@ -1,0 +1,6 @@
+<h1>Добавленный предмет: </h1>
+<p>id: <%= @subject.id %> </p>
+<p>Предмет: <%= @subject.subject %> </p>
+<br />
+<button><%= link_to 'Редактировать данные предмета', edit_subject_path(@subject.id) %></button>
+<button><%= link_to 'Добавить новый предмет', new_subject_path %></button>

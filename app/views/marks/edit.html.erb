@@ -1,0 +1,43 @@
+<h1>Редактирвоать оценку:</h1>
+<%= form_for @mark do |f| %>
+	<table>
+		<tr>
+			<td>
+  				<b>Student ID: </b>
+			</td>
+			<td>
+				<%#= f.text_field :student_id %>
+
+          <%#= f.text_field :student_id, collection: @students, as: :grouped_select, group_method: :name %>
+
+          <%#= select_tag(:student_id, options_for_select(@student_options)) %>
+          <%= f.select(:student_id, @student_options) %>
+			</td>
+		</tr>
+		<tr>
+			<td>
+  				<b>Subject ID: </b>
+  			</td>
+  			<td>
+  				<%= f.select(:subject_id, @subject_options) %>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td>
+  				<b>Mark: </b>
+  			</td>
+  			<td>
+  				<%= f.text_field :mark %>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td>
+  				<b>Semestr: </b>
+  			</td>
+  			<td>
+  				<%= f.text_field :semestr %>
+  			</td>
+  		</tr>
+	</table>
+  <%= f.submit "Create Mark" %>
+<% end %>

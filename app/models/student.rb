@@ -1,4 +1,3 @@
 class Student < ActiveRecord::Base
-	has_many :mark
-	
+	has_many :marks
 end

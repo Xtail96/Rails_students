@@ -1,0 +1,46 @@
+<table border="1px" border-color="#000">
+	<tr>
+		<td>
+			id
+		</td>
+		<td>
+			Student ID
+		</td>
+		<td>
+			Subject ID
+		</td>
+		<td>
+			Mark
+		</td>
+		<td>
+			Semestr
+		</td>
+    <td>
+			Action
+		</td>
+	</tr>
+	<% @marks.each do |mark| %>
+		<tr>
+      <td>
+				<%= mark.id %>
+			</td>
+			<td>
+				<%= mark.student_id %>
+			</td>
+			<td>
+				<%= mark.subject_id %>
+			</td>
+			<td>
+				<%= mark.mark %>
+			</td>
+			<td>
+				<%= mark.semestr %>
+			</td>
+      <td>
+        <%= link_to 'Редактировать', edit_mark_path(mark.id) %>
+				<%= link_to 'Удалить', mark, method: :delete %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+<button><%= link_to 'Добавить оценку', new_mark_path %></button>

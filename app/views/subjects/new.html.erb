@@ -1,0 +1,15 @@
+<h1>Добавить предмет:</h1>
+<%= form_for @subject do |f| %>
+	<table>
+		<tr>
+			<td>
+  				<b>Subject Name: </b>
+			</td>
+			<td>
+				<%= f.text_field :subject %>
+			</td>
+		</tr>
+
+	</table>
+  <%= f.submit "Create Subject" %>
+<% end %>

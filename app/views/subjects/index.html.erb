@@ -1,0 +1,21 @@
+<table border="1px">
+	<tr>
+		<td>id-subject</td>
+		<td>Предмет</td>
+		<td>Действие</td>
+	</tr>
+	<% @subjects.each do |subject| %>
+		<tr>
+			<td><%= subject.id %></td>
+			<td><%= subject.subject %></td>
+			<td>
+				<%= link_to 'Редактировать', edit_subject_path(subject.id) %>
+				<%= link_to 'Удалить', subject, method: :delete %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+<button><%= link_to 'Добавить новый предмет', new_subject_path %></button>
+
+<%#= @students.inspect %>

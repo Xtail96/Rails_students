@@ -1,5 +1,5 @@
 <h1>Добавить студента:</h1>
-<%= form_for @students, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+<%= form_for @student do |f| %>
 	<table>
 		<tr>
 			<td>
@@ -49,20 +49,6 @@
   				<%= f.text_field :opinion %>
   			</td>
   		</tr>
-  		<tr>
-  			<td>Оценки по предметам</td>
-  		</tr>
-  		<tr>
-  			<td>
-  				<b>Math: </b>
-  			</td>
-  			<td>
-  				<%= f.text_field :mark %>
-  			</td>
-  		</tr>
 	</table>
   <%= f.submit "Create Student" %>
 <% end %>
-
-
-
